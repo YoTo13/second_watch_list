@@ -1,0 +1,6 @@
+<h1>Modifier une liste</h1>
+
+<%= simple_form_for @list do |f| %>
+  <%= f.input :name, label:"Mettre à jour le nom" %>
+  <%= f.submit "Mettre à jour" %>
+<% end %>

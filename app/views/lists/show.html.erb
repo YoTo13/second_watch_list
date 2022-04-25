@@ -1,0 +1,11 @@
+<p>c'est la show de la list</p>
+
+<div class="lists">
+  <ul>
+    <% @bookmarks.each do |bookmark| %>
+      <h1><%= bookmark.comment %></h1>
+    <% end %>
+  </ul>
+</div>
+
+<p><%= link_to "Créer un bookmark", new_list_bookmark_path(@list) %></p>
