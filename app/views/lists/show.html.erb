@@ -1,5 +1,7 @@
 <p>c'est la show de la list</p>
 
+<p><%= link_to "Créer un bookmark", new_list_bookmark_path(@list) %></p>
+
 <div class="lists">
   <ul>
     <% @bookmarks.each do |bookmark| %>
@@ -8,4 +10,12 @@
   </ul>
 </div>
 
-<p><%= link_to "Créer un bookmark", new_list_bookmark_path(@list) %></p>
+
+<div>
+<p> <% @movies.each do |movie| %>
+      <ul> <%= movie.title %>
+           <%= movie.overview %>
+           <%= image_tag movie.post_url %>
+           <%= movie.rating %> </ul>
+    <% end %></p>
+</div>

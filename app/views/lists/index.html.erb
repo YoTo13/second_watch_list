@@ -1,12 +1,18 @@
 <p><%= link_to "Créer une liste", new_list_path %></p>
 
-<div class="lists">
-  <ul>
+<div class="d-flex justify-content-center">
+  <div class="row col-6">
     <% @lists.each do |list| %>
-      <h1><%= list.name %></h1>
-      <p><%= link_to "Afficher le contenu de ma liste", list_path(list) %></p>
-      <p><%= link_to "Modifier le contenu de la liste", edit_list_path(list) %></p>
-      <p><%= link_to "Supprimer la liste", list_path(list), method: :delete %></p>
+      <div class="card mx-4 my-4 text-white bg-secondary" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title card-header"><%= list.name %></h5>
+          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <%= link_to "Afficher", list_path(list), class:"card-link" %>
+          <%= link_to "Modifier", edit_list_path(list), class:"card-link" %>
+          <%= link_to "Supprimer", list_path(list), method: :delete, class:"card-link" %>
+        </div>
+      </div>
     <% end %>
-  </ul>
+  </div>
 </div>
